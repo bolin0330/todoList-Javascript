@@ -1,1 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --white: #fff;
+    --light-grey: #f5f6f7;
+    --dark-grey: #0a0a23;
+    --blue: #007acc;
+    --royal-blue: #4169e1;
+}
+  
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-grey);
+}
+
+h1 {
+  color: var(--light-grey);
+  margin: 20px 0 40px 0;
+}
+
+.gradient-custom {
+  background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+      linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+      linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+      radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+      radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+}
+
+.todo-app {
+  background-color: var(--white);
+  width: 300px;
+  height: 350px;
+  border: 5px solid var(--blue);
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  color: var(--light-grey);
+  background-color: var(--royal-blue);
+  background-image: linear-gradient(#4169e1, #007acc);
+  border-color: var(--royal-blue);
+  border-width: 3px;
+}
+
+.btn:hover {
+  background-image: linear-gradient(#4169e1, #007acc);
+}
+
+.large-btn {
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+.close-task-form-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.task-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  height: 350px;
+  overflow: auto;
+}
+
+#title-input,
+#date-input,
+#description-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+#confirm-close-dialog {
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+
+.discard-message-text {
+  font-size: 1.5rem;
+}
+
+#tasks-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+@media (min-width: 576px) {
+  .todo-app,
+  .task-form {
+    width: 400px;
+    height: 450px;
+  }
+
+  .task-form-label {
+    font-size: 1.5rem;
+  }
+
+  #title-input,
+  #date-input {
+    height: 2rem;
+  }
+
+  #title-input,
+  #date-input,
+  #description-input {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+}
