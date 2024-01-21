@@ -1,5 +1,5 @@
 const taskForm = document.getElementById("task-form");
-const confirmCloseDialog = document.getElementById("confirm-close-dialog");
+const confirmCloseDialog = new bootstrap.Modal(document.getElementById("confirm-close-dialog"));
 const openTaskFormBtn = document.getElementById("open-task-form-btn");
 const closeTaskFormBtn = document.getElementById("close-task-form-btn");
 const addOrUpdateTaskBtn = document.getElementById("add-or-update-task-btn");
@@ -107,16 +107,16 @@ closeTaskFormBtn.addEventListener("click", () => {
   const formInputValuesUpdated = titleInput.value !== currentTask.title || dateInput.value !== currentTask.date || descriptionInput.value !== currentTask.description;
 
   if (formInputsContainValues && formInputValuesUpdated) {
-    confirmCloseDialog.showModal();
+    confirmCloseDialog.toggle();
   } else {
     reset();
   }
 });
 
-cancelBtn.addEventListener("click", () => confirmCloseDialog.close());
+cancelBtn.addEventListener("click", () => confirmCloseDialog.hide());
 
 discardBtn.addEventListener("click", () => {
-  confirmCloseDialog.close();
+  confirmCloseDialog.hide();
   reset()
 });
 
