@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-:root {
-    --white: #fff;
-    --light-grey: #f5f6f7;
-    --dark-grey: #0a0a23;
-    --blue: #007acc;
-    --royal-blue: #4169e1;
-}
-  
 *,
 *::before,
 *::after {
@@ -23,6 +15,7 @@ body {
 h1 {
   font-family: 'Cinzel', serif;
   text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 3.5rem;
 }
 
 .gradient-custom {
@@ -35,12 +28,8 @@ h1 {
 }
 
 .todo-app {
-  background-color: var(--white);
   width: 350px;
   height: 450px;
-  border: 3px solid var(--blue);
-  border-radius: 8px;
-  padding: 15px;
   position: relative;
 }
 
@@ -53,25 +42,9 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--white);
-  border-radius: 5px;
-  padding: 15px;
   width: 350px;
-  min-height: 450px;
+  height: 450px;
   overflow: auto;
-}
-
-#title-input,
-#date-input,
-#description-input {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 2px;
-}
-
-.modal-content {
-  padding: 10px;
-  margin: 10px auto;
 }
 
 .discard-message-text {
@@ -84,6 +57,10 @@ h1 {
 }
 
 @media (min-width: 576px) {
+  h1 {
+    font-size: 4rem;
+  }
+
   .todo-app,
   .task-form {
     width: 450px;
@@ -92,17 +69,5 @@ h1 {
 
   .task-form-label {
     font-size: 1.5rem;
-  }
-
-  #title-input,
-  #date-input {
-    height: 2rem;
-  }
-
-  #title-input,
-  #date-input,
-  #description-input {
-    padding: 5px;
-    margin-bottom: 20px;
   }
 }

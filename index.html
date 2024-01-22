@@ -22,16 +22,16 @@
 </head>
 <body>
     <section class="vh-100 gradient-custom">
-        <div class="container py-5 h-100" tabindex="-1">
-            <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                <h1 class="fw-bold text-light display-3 mt-sm-3 mb-sm-5 mt-1 mb-3">Todo App</h1>
-                <div class="todo-app d-flex flex-column gap-3">
+        <div class="container py-sm-4 h-100" tabindex="-1">
+            <div class="d-flex flex-column justify-content-space-between align-items-center h-100">
+                <h1 class="d-block fw-bold text-light my-5">Todo App</h1>
+                <div class="todo-app d-flex flex-column p-3 gap-3 border border-primary border-3 rounded-3 bg-body">
                   <div class="d-grid col-10 align-self-center">
                     <button id="open-task-form-btn" class="btn btn-primary my-sm-3 my-2">
                       Add New Task
                     </button>
                   </div>
-                  <form class="task-form d-none" id="task-form">
+                  <form class="task-form d-none p-3 rounded-3 bg-body" id="task-form">
                     <div class="d-flex justify-content-end" data-bs-target="#confirm-close-dialog">
                       <button id="close-task-form-btn" class="bg-transparent border-0" type="button" aria-label="close">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg text-danger" viewBox="0 0 16 16">
@@ -39,23 +39,23 @@
                         </svg>
                       </button>
                     </div>
-                    <div class="d-flex flex-column justify-content-around">
-                      <label class="d-block" for="title-input">Title</label>
-                      <input required type="text" class="d-block" id="title-input" value="" />
-                      <label class="d-block" for="date-input">Date</label>
-                      <input type="date" class="d-block" id="date-input" value="" />
-                      <label class="d-block" for="description-input">Description</label>
-                      <textarea class="d-block" id="description-input" cols="30" rows="5"></textarea>
+                    <div class="d-flex flex-column justify-content-around mb-3">
+                      <label class="d-block form-label" for="title-input">Title</label>
+                      <input required type="text" class="d-block form-control border-dark-subtle mb-2" id="title-input" value="" />
+                      <label class="d-block form-label" for="date-input">Date</label>
+                      <input type="date" class="d-block form-control border-dark-subtle mb-2" id="date-input" value="" />
+                      <label class="d-block form-label" for="description-input">Description</label>
+                      <textarea class="d-block form-control border-dark-subtle mb-2" id="description-input" cols="30" rows="5"></textarea>
                     </div>
                     <div class="d-flex justify-content-center">
-                      <button id="add-or-update-task-btn" class="btn btn-primary col-10 my-sm-3 mt-4" type="submit">
+                      <button id="add-or-update-task-btn" class="btn btn-primary col-10" type="submit">
                         Add Task
                       </button>
                     </div>
                   </form>
                   <div id="confirm-close-dialog" class="modal fade" data-bs-backdrop="static" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content border border-primary border-3 rounded">
+                      <div class="modal-content p-2 border border-primary border-3 rounded-4">
                         <div class="modal-body">
                           <p class="discard-message-text fw-bold">Discard unsaved changes?</p>
                         </div>
